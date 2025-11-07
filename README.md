@@ -1,0 +1,1 @@
+# NiFi-Parquet-File-Reader-with-Parquet-Schema-Recognition-
