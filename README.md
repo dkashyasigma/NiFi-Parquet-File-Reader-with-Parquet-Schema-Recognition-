@@ -48,6 +48,7 @@ Below are **all the commands** you need to build and test the project.
 ## ✅ 1. **Build without running tests**
 
 ```sh
+cd nifi-parquet-schema-reader/
 mvn clean install -DskipTests
 ```
 
