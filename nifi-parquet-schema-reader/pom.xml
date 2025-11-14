@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.apache.nifi</groupId>
+    <artifactId>nifi-parquet-schema-reader-bundle</artifactId>
+    <version>2.5.0</version>
+    <packaging>pom</packaging>
+    <name>NiFi SPPL Bundle</name>
+
+    <properties>
+        <nifi.version>2.5.0</nifi.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <junit.jupiter.version>5.10.2</junit.jupiter.version>
+        <jackson.version>2.17.1</jackson.version>
+        <parquet.version>1.13.1</parquet.version>
+        <avro.version>1.11.3</avro.version>
+        <hadoop.version>3.3.6</hadoop.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Import NiFi BOM to manage NiFi artifact versions -->
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-bom</artifactId>
+                <version>${nifi.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>nifi-parquet-schema-reader-processors</module>
+        <module>nifi-parquet-schema-reader-nar</module>
+    </modules>
+
+    <repositories>
+        <repository>
+            <id>apache-nifi-releases</id>
+            <name>Apache NiFi Releases</name>
+            <url>https://repository.apache.org/content/repositories/releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>apache-nifi-snapshots</id>
+            <name>Apache NiFi Snapshots</name>
+            <url>https://repository.apache.org/content/repositories/snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>apache-nifi-plugins-releases</id>
+            <name>Apache NiFi Plugins Releases</name>
+            <url>https://repository.apache.org/content/repositories/releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>apache-nifi-plugins-snapshots</id>
+            <name>Apache NiFi Plugins Snapshots</name>
+            <url>https://repository.apache.org/content/repositories/snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
