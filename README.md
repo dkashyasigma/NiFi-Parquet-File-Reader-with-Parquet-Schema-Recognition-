@@ -1,5 +1,5 @@
 
-# ✅ **NiFi Parquet Schema Reader Processor**
+# ✅ **NiFi Parquet Schema Reader Processor plugin**
 
 <img width="752" height="377" alt="image" src="https://github.com/user-attachments/assets/c621bff7-45bd-413a-b920-ab51c4167dbb" />
 
